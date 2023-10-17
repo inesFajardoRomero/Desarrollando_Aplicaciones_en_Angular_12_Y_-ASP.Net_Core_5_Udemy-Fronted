@@ -33,4 +33,8 @@ export class AppComponent implements OnInit {
   manejarRated(voto:number):void{
     alert(voto);
   }
+
+  cambiarTitulo(e:any):void{
+    this.title = e.target.value;
+  }
 }
