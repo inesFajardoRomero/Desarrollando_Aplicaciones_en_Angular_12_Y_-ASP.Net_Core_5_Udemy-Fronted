@@ -30,4 +30,7 @@ export class AppComponent implements OnInit {
   duplicarNumero(valor: number) {
     return valor * 2;
   }
+  manejarRated(voto:number):void{
+    alert(voto);
+  }
 }
