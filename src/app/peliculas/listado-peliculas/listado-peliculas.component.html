@@ -8,10 +8,10 @@
       class="pelicula-contenedor"
     >
       <div>
-        Película {{ index + 1 }}: {{ pelicula.titulo | uppercase }}
+       <h2> Película {{ index + 1 }}: {{ pelicula.titulo | uppercase }}
         <button style="margin-left: 1rem" (click)="remover(index)">
           Remover
-        </button>
+        </button></h2>
       </div>
       <div>
         {{ pelicula.fechaLanzamiento | date : "yyyy-MMMM-dd" | uppercase }}

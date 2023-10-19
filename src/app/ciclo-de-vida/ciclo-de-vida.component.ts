@@ -9,7 +9,7 @@ import { RatingComponent } from '../utilidades/rating/rating.component';
 export class CicloDeVidaComponent implements OnInit, OnChanges, OnDestroy, DoCheck, AfterViewInit{
   @Input() titulo:string; 
   @ViewChild(RatingComponent) ratingComponent : RatingComponent;
-  
+  timer: ReturnType<typeof setInterval>; 
   constructor(private changeDetectorRef:ChangeDetectorRef){
 
   }
@@ -24,6 +24,7 @@ export class CicloDeVidaComponent implements OnInit, OnChanges, OnDestroy, DoChe
   }
   ngOnDestroy(): void {
     console.log("ngOnDestroy");
+    clearInterval(this.timer);
   }
  
   ngOnChanges(changes: SimpleChanges): void {
@@ -32,6 +33,9 @@ export class CicloDeVidaComponent implements OnInit, OnChanges, OnDestroy, DoChe
   
   ngOnInit(): void {
     console.log("ngOnInit");
+    this.timer = setInterval(()=>{
+      console.log(new Date()); 
+    }, 1000)
     
   }
 

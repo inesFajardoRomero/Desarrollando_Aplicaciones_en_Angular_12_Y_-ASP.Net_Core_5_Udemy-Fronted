@@ -21,11 +21,13 @@ export class AppComponent implements OnInit {
         },
       ];
       this.peliculasProximosEstrenos = [];
-    }, 3000);
+    }, 4000);
   }
+  
   title = 'al valor que yo quiera';
   peliculasEnCines;
   peliculasProximosEstrenos;
+  ocultar = false;
 
   duplicarNumero(valor: number) {
     return valor * 2;
