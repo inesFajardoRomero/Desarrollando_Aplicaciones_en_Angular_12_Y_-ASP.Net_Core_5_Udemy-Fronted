@@ -1,27 +1,4 @@
-<!-- <p>Hola mundo</p>
-<div>
-  {{ title }}
-</div>
-<div>La suma de y es {{ 2 + 2 }}</div>
-
-<div>El doble de 3 es {{ duplicarNumero(3) }}</div> -->
-<!-- <input type="file" style="display: none" #cargador />
-<button (click)="cargador.click()">Cargar archivo</button>
- -->
 <app-menu></app-menu>
 <div class="contenedor">
-  <!-- <app-rating (rated)="manejarRated($event)"></app-rating>
-  <div>
-    <input type="text" (input)="cambiarTitulo($event)"/>
-  </div>
-  <div>
-    <input type="checkbox" (change)="ocultar = !ocultar"/> Ocultar
-  </div>
-  <app-ciclo-de-vida *ngIf="ocultar" [titulo] = "title"></app-ciclo-de-vida> -->
-   <h2>En cines</h2>
-  <app-listado-peliculas [peliculas]="peliculasEnCines"></app-listado-peliculas>
-  <h2>Futuros Estrenos</h2>
-  <app-listado-peliculas
-    [peliculas]="peliculasProximosEstrenos"
-  ></app-listado-peliculas>
+  <router-outlet></router-outlet>
 </div>
