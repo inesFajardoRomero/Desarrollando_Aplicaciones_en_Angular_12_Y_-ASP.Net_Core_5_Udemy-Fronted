@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { primeraLetraMayuscula } from 'src/app/utilidades/validadores/primeraLetraMayuscula';
+import { generoCreacionDTO } from '../genero';
 
 @Component({
   selector: 'app-crear-generos',
@@ -28,10 +29,11 @@ export class CrearGenerosComponent implements OnInit {
     })
   }
 
-  guardarCambios(){
-    //this.router.navigate(["/generos"]);
-    console.log(this.form)
+  guardarCambios(genero:generoCreacionDTO){
+    console.log(genero);
+    this.router.navigate(['/generos'])
   }
+
   obtenerErrorCampoNombre():string{
     var campo = this.form.get('nombre');
     if(campo.hasError('required')){

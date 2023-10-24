@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { actorCreacionDTO } from '../actor';
 
 @Component({
   selector: 'app-crear-actor',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CrearActorComponent {
 
+  guardarCambios(actor:actorCreacionDTO){
+    console.log(actor);
+    //this.router.navigate(['/generos'])
+  }
 }
