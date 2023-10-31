@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { toBase64 } from '../utilidades';
 
 @Component({
@@ -8,7 +8,7 @@ import { toBase64 } from '../utilidades';
 })
 export class InputImgComponent {
   @Output() archivoSeleccionado : EventEmitter<File> = new EventEmitter<File> 
-
+  @Input() urlImagenActual:string; 
   imagenBase64:string; 
   change(event){
     if(event.target.files.length > 0){
@@ -17,6 +17,7 @@ export class InputImgComponent {
         this.imagenBase64 = value;
       }).catch(error=> console.log(error))
       this.archivoSeleccionado.emit(file); 
+      this.urlImagenActual = null;
     }
   }
 }

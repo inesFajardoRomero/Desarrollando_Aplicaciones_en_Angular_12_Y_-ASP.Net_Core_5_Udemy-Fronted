@@ -25,8 +25,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
 import { FiltroPeliculaComponent } from './peliculas/filtro-pelicula/filtro-pelicula.component';
 import { FomularioActorComponent } from './actores/fomulario-actor/fomulario-actor.component';
-import { InputImgComponent } from './utilidades/input-img/input-img.component'
-
+import { InputImgComponent } from './utilidades/input-img/input-img.component';
+import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component'
+import { MarkdownModule } from 'ngx-markdown';
+import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,13 +52,17 @@ import { InputImgComponent } from './utilidades/input-img/input-img.component'
     FiltroPeliculaComponent,
     FomularioActorComponent,
     InputImgComponent,
+    InputMarkdownComponent,
+    FormularioCineComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
